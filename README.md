@@ -1,2 +1,14 @@
-# SOS2223-JUL-MMC
-Hola esta es la rec de julio
+- **Team**
+   - [Carlos López Cárdenas](https://github.com/carlopcar4)
+   - [Carolina Bernal Marchena](https://github.com/CarolinaBernalMarchena)
+   - [Marcos Morales Campos](https://github.com/marcos1812)
+- **Project description**: Our project consists of analyzing professional organisations stats, andalusian civil war graves and Cadiz agroclimatic information.
+
+- **Repository**: [gti-sos/SOS2223-16](https://github.com/gti-sos/SOS2223-16)
+- **URL**: [https://sos2223-16.appspot.com](https://sos2223-16.ew.r.appspot.com/)
+- **APIs**:
+  - [https://sos2223-16.appspot.com/api/v1/professionalorganisations-stats/docs](https://sos2223-16.appspot.com/api/v1/professionalorganisations-stats/docs) (developed by Carolina Bernal Marchena)
+   - [https://sos2223-16.appspot.com/api/v2/professionalorganisations-stats/docs](https://sos2223-16.appspot.com/api/v2/professionalorganisations-stats/docs) (developed by Carolina Bernal Marchena)
+  - [https://sos2223-16.ew.r.appspot.com/api/v1/civilwarandalusian-stats/docs](https://sos2223-16.ew.r.appspot.com/api/v1/civilWarAndalusian-stats/docs) (developed by Marcos Morales Campos)
+  - [https://documenter.getpostman.com/view/26036256/2s93Xwy47C](https://sos2223-16.ew.r.appspot.com/api/v1/cadiz-agroclimatic-informations-stats/docs) (developed by Carlos López Cárdenas)
+  - [https://documenter.getpostman.com/view/26036256/2s93Xwy47A](https://sos2223-16.ew.r.appspot.com/api/v2/cadiz-agroclimatic-informations-stats/docs) (developed by Carlos López Cárdenas)
