@@ -1,4 +1,4 @@
 <nav>
-    Marcos Morales Campos: <a href="https://youtu.be/VzbBRm5tVis">Video de Fosas comunaaaaaes1</a><br>
+    Marcos Morales Campos: <a href="https://youtu.be/VzbBRm5tVis">Video de Fosas comunes1</a><br>
     
 </nav>
