@@ -7,7 +7,7 @@ function loadBackend_civilwarandalusian(app) {
     
     /** PROXY  */
     app.use("/api/v2/civilwarandalusian-stats/proxy",function(req,res){
-        let urlHost = "https://drinks-digital1.p.rapidapi.com";
+        let urlHost = "https://cat-fact.herokuapp.com/facts";
         let url = urlHost + req.url;
         console.log('piped: proxy' + req.url);
         console.log(url);

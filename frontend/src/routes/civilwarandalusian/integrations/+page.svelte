@@ -22,16 +22,20 @@
     let data2 = [];
 
 
+    
+
+
+
 
     async function getRapidApi() {
       console.log("API");
       const options = {
-        method: 'GET',
-        headers: {
-          'content-type': 'application/octet-stream',
-          'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
-          'X-RapidAPI-Host': 'drinks-digital1.p.rapidapi.com'
-        }
+        method: 'GET'
+      //  headers: {
+        //  'content-type': 'application/octet-stream',
+         // 'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
+          //'X-RapidAPI-Host': 'cat-fact.herokuapp.com/facts'
+        //}
       };
       try{
        
@@ -46,6 +50,7 @@
           console.error(error);
         }
 
+        
 
 
     }
@@ -112,27 +117,30 @@
     <Table>
         <thead>
             <tr>
-                <th>Identificador</th>
-                <th>Categoria</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tips</th>
-                <th>Tipo Alcoholizados</th>
+                <th>_id</th>
+                <th>__v</th>
+                <th>text</th>
+                <th>updatedAt</th>
+                <th>deleted</th>
+                <th>source</th>
+                <th>sentCount</th>
             </tr>
         </thead>
         <tbody>
             {#each datos2 as conjunto}
                 <tr>
-                    <td>{conjunto["id"]}</td>
-                    <td>{conjunto["spirit_id"]}</td>
-                    <td>{conjunto["cocktail_name"]}</td>
-                    <td>{conjunto["description"]}</td>
-                    <td>{conjunto["additional_tips"]}</td>
-                    <td>{conjunto["alcoholic"]}</td>
+                    <td>{conjunto["_id"]}</td>
+                    <td>{conjunto["__v"]}</td>
+                    <td>{conjunto["text"]}</td>
+                    <td>{conjunto["updatedAt"]}</td>
+                    <td>{conjunto["deleted"]}</td>
+                    <td>{conjunto["source"]}</td>
+                    <td>{conjunto["sentCount"]}</td>
                 </tr>
             {/each}
             <br>
         </tbody>
+        
     </Table>
     <h1 align="center"><u>Muscle Days</u></h1>
        
