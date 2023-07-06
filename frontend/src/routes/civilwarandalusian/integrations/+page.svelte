@@ -62,8 +62,9 @@
         method: 'GET',
         headers: {
           'content-type': 'application/octet-stream',
-          'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
-		  'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
+          'X-RapidAPI-Host': 'gas-price.p.rapidapi.com',
+          'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b'
+		  
         }
       };
       try{
