@@ -43,33 +43,33 @@
 
 
 
-    async function getRapidApi() {
-      console.log("API");
-      const options = {
-        method: 'GET'
+   // async function getRapidApi() {
+     // console.log("API");
+    //  const options = {
+    //    method: 'GET'
       //  headers: {
         //  'content-type': 'application/octet-stream',
          // 'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
           //'X-RapidAPI-Host': 'cat-fact.herokuapp.com/facts'
         //}
-      };
-      try{
+  //    };
+    //  try{
        
-        const pprox = await fetch(API+"/proxy/datos",{
-                method: 'GET',
+     //   const pprox = await fetch(API+"/proxy/datos",{
+      //          method: 'GET',
                 
-                });
-            const jsonData = await pprox.json();
-            datos2 = jsonData;
-            console.log(datos2);
-        } catch (error) {
-          console.error(error);
-        }
+       //         });
+        //    const jsonData = await pprox.json();
+       //     datos2 = jsonData;
+       //     console.log(datos2);
+      //  } catch (error) {
+       //   console.error(error);
+       // }
 
         
 
 
-    }
+   // }
 
     async function getRapidApi2() {
 
@@ -95,34 +95,34 @@
 
       let Api_compañero = "https://sos2223-12.appspot.com/api/v1/agroclimatic";
 
-    async function getDato_compañero() {
+   // async function getDato_compañero() {
 
-            const res = await fetch(Api_compañero, {
-                method: "GET",
-            });
-            try {
-                const rq = await res.json();
-                datos4 = rq;
-                console.log(rq);
-            } catch (error) {
-                console.log(`Error parsing result: ${error}`);
-            }
-        }
-       let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
+      //      const res = await fetch(Api_compañero, {
+     //           method: "GET",
+      //      });
+       //     try {
+       //         const rq = await res.json();
+       //         datos4 = rq;
+        //        console.log(rq);
+        //    } catch (error) {
+        //        console.log(`Error parsing result: ${error}`);
+        //    }
+      //  }
+     //  let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
 
-       async function getDato_compañero2() {
-        const res2 = await fetch(Api_compañero2 , {
-              method: "GET",
-            });
-          try {
+      // async function getDato_compañero2() {
+      //  const res2 = await fetch(Api_compañero2 , {
+       //       method: "GET",
+      //      });
+       //   try {
             
-              const rq2 = await res2.json();
-              datos5 = rq2;
-              console.log(rq2);
-          } catch (error) {
-              console.log(`Error parsing result: ${error}`);
-          }
-}
+        //      const rq2 = await res2.json();
+       //       datos5 = rq2;
+        //      console.log(rq2);
+        //  } catch (error) {
+       //       console.log(`Error parsing result: ${error}`);
+       //   }
+//}
 
 </script>
 
