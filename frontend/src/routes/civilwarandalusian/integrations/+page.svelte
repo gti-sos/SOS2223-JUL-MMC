@@ -57,16 +57,16 @@
 
 
     async function getRapidApi() {
-      console.log("API");
-      const options = {
+       console.log("API");
+       const options = {
         method: 'GET',
         url: "https://sos2223-jul-mmc-1.appspot.com/agroclimatizaciones",
         headers: {
-          'content-type': 'application/octet-stream',
-          
+          //'content-type': 'application/octet-stream',
           'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
-		  'X-RapidAPI-Host': 'gas-price.p.rapidapi.com',
-        }
+          'X-RapidAPI-Host': 'gas-price.p.rapidapi.com',
+          
+		}
       };
       try{
        
@@ -75,7 +75,7 @@
                 
              //   });
             const jsonData = await axios.request(options);
-           datos2 = jsonData;
+           datos2 = jsonData.data;
            console.log(datos2);
         } catch (error) {
           console.error(error);
