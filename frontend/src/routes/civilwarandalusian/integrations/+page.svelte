@@ -9,9 +9,9 @@
     if (dev) API = "http://localhost:8080" + API;
     
     onMount(async () => {
-       // getRapidApi();
+        getRapidApi();
         getRapidApi2();
-        //getDato_compañero();
+        getDato_compañero();
         getDato_compañero2();
       //  getDataComp();
     });
@@ -56,33 +56,33 @@
   //}
 
 
-   // async function getRapidApi() {
-     // console.log("API");
-    //  const options = {
-    //    method: 'GET'
-      //  headers: {
-        //  'content-type': 'application/octet-stream',
-         // 'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
-          //'X-RapidAPI-Host': 'cat-fact.herokuapp.com/facts'
-        //}
-  //    };
-    //  try{
+    async function getRapidApi() {
+      console.log("API");
+      const options = {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/octet-stream',
+          'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
+		  'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
+        }
+      };
+      try{
        
-     //   const pprox = await fetch(API+"/proxy/datos",{
-      //          method: 'GET',
+        const pprox = await fetch(API_prox,{
+                method: 'GET',
                 
-       //         });
-        //    const jsonData = await pprox.json();
-       //     datos2 = jsonData;
-       //     console.log(datos2);
-      //  } catch (error) {
-       //   console.error(error);
-       // }
+                });
+            const jsonData = await pprox.json();
+           datos2 = jsonData;
+           console.log(datos2);
+        } catch (error) {
+          console.error(error);
+        }
 
         
 
 
-   // }
+    }
 
     async function getRapidApi2() {
 
@@ -108,23 +108,23 @@
 
       let Api_compañero = "https://sos2223-12.appspot.com/api/v1/agroclimatic";
 
-   // async function getDato_compañero() {
+    async function getDato_compañero() {
 
-      //      const res = await fetch(Api_compañero, {
-     //           method: "GET",
-      //      });
-       //     try {
-       //         const rq = await res.json();
-       //         datos4 = rq;
-        //        console.log(rq);
-        //    } catch (error) {
-        //        console.log(`Error parsing result: ${error}`);
-        //    }
-      //  }
+            const res = await fetch(Api_compañero, {
+                method: "GET",
+            });
+            try {
+                const rq = await res.json();
+                datos4 = rq;
+                console.log(rq);
+            } catch (error) {
+                console.log(`Error parsing result: ${error}`);
+           }
+        }
        let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
 
       async function getDato_compañero2() {
-       const res2 = await fetch(API_prox , {
+       const res2 = await fetch(Api_compañero2 , {
               method: "GET",
             });
           try {
@@ -141,30 +141,27 @@
 
 <main>
 
-    <h1 align="center"><u>Drinks Rapid Api</u></h1>
+    <h1 align="center"><u>Gas Rapid Api</u></h1>
     <br>
     <Table>
         <thead>
             <tr>
-                <th>_id</th>
-                <th>__v</th>
-                <th>text</th>
-                <th>updatedAt</th>
-                <th>deleted</th>
-                <th>source</th>
-                <th>sentCount</th>
+                <th>currency</th>
+                <th>lpg</th>
+                <th>diesel</th>
+                <th>gasoline</th>
+                <th>country</th>
+            
             </tr>
         </thead>
         <tbody>
             {#each datos2 as conjunto}
                 <tr>
-                    <td>{conjunto["_id"]}</td>
-                    <td>{conjunto["__v"]}</td>
-                    <td>{conjunto["text"]}</td>
-                    <td>{conjunto["updatedAt"]}</td>
-                    <td>{conjunto["deleted"]}</td>
-                    <td>{conjunto["source"]}</td>
-                    <td>{conjunto["sentCount"]}</td>
+                    <td>{conjunto["currency"]}</td>
+                    <td>{conjunto["lpg"]}</td>
+                    <td>{conjunto["diesel"]}</td>
+                    <td>{conjunto["gasoline"]}</td>
+                    <td>{conjunto["country"]}</td>
                 </tr>
             {/each}
             <br>
