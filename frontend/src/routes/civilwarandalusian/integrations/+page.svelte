@@ -10,7 +10,7 @@
     
     onMount(async () => {
         getRapidApi();
-        getRapidApi2();
+    //    getRapidApi2();
         getDato_compañero();
         getDato_compañero2();
       //  getDataComp();
@@ -162,11 +162,12 @@ async function getRapidApi() {
         <tbody>
             {#each datos2 as conjunto}
                 <tr>
-                    <td>{conjunto["currency"]}</td>
-                    <td>{conjunto["lpg"]}</td>
-                    <td>{conjunto["diesel"]}</td>
-                    <td>{conjunto["gasoline"]}</td>
-                    <td>{conjunto["country"]}</td>
+                    <td>{conjunto["_id"]}</td>
+                    <td>{conjunto["__v"]}</td>
+                    <td>{conjunto["text"]}</td>
+                    <td>{conjunto["deleted"]}</td>
+                    <td>{conjunto["source"]}</td>
+                    <td>{conjunto["sentCount"]}</td>
                 </tr>
             {/each}
             <br>
