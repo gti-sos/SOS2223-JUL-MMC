@@ -9,9 +9,9 @@
     if (dev) API = "http://localhost:8080" + API;
     
     onMount(async () => {
-        getRapidApi();
+       // getRapidApi();
         getRapidApi2();
-        getDato_compañero();
+        //getDato_compañero();
         getDato_compañero2();
         getDataComp();
     });
