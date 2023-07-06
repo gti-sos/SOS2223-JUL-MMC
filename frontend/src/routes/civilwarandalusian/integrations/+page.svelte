@@ -56,25 +56,35 @@
   //}
 
 
-    async function getRapidApi() {
-       console.log("API");
-       const url = 'https://sos2223-jul-mmc-1.appspot.com/agroclimatizaciones';
-            const options = {
-                method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
-                    'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
-                }
-            };
+  //  async function getRapidApi() {
+    //   console.log("API");
+      // const url = 'https://sos2223-jul-mmc-1.appspot.com/agroclimatizaciones';
+        //    const options = {
+          //      method: 'GET',
+            ////      'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
+                //    'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
+                //}
+            //};
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
-        
+//try {
+//	const response = await fetch(url, options);
+//	const result = await response.text();
+//	console.log(result);
+//} catch (error) {
+//	console.error(error);
+//}
+async function getRapidApi() {
+       console.log("API");
+       const response = await fetch(API_prox, {
+                method: "GET",
+            });
+            try {
+                const result = await response.json();
+                datos2 = result;
+                console.log(result);
+            } catch (error) {
+                console.log(`Error parsing result: ${error}`);
+           }
 
 
     }
