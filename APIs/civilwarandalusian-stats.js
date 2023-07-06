@@ -4,13 +4,14 @@ const db = new datastore();
 const BASE_API_URL = "/api/v1"
 
 function loadBackend_civilwarandalusian(app) {
-    
+
+
+
     /** PROXY  */
     app.use("/api/v2/civilwarandalusian-stats/proxy",function(req,res){
-        let urlHost = "https://cat-fact.herokuapp.com/facts";
+        let urlHost = "https://sos2223-12.appspot.com/api/v1/agroclimatic";
         let url = urlHost + req.url;
-        console.log('piped: proxy' + req.url);
-        console.log(url);
+        console.log('piped: ' + req.url);
         req.pipe(request(url)).pipe(res);
     });
 

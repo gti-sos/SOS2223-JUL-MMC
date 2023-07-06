@@ -13,6 +13,7 @@
         getRapidApi2();
         getDato_compañero();
         getDato_compañero2();
+        getDataComp();
     });
 
     let datos2 = [];
@@ -20,9 +21,24 @@
     let datos4 = [];
     let datos5 = [];
     let data2 = [];
+    let datosP = [];
 
 
-    
+    let API_prox = "https://sos2223-jul-mmc-1.appspot.com/api/v2/civilwarandalusian-stats/proxy"; 
+
+    async function getDataComp() {
+        const res = await fetch(API_prox, {
+                method: "GET",
+            });
+            try {
+                const rqP = await res.json();
+                datosP = rqP;
+                console.log(rqP);
+            } catch (error) {
+                console.log(`Error parsing result: ${error}`);
+            }
+    };
+
 
 
 
@@ -169,7 +185,31 @@
             <br>
         </tbody>
     </Table>
-
+    <h1 align="center"><u>Estadisticas Agroclimaticas con proxy API compañero</u></h1>
+    <Table>
+      <thead>
+          <tr>
+              <th>provincia</th>
+              <th>año</th>
+              <th>minima</th>
+              <th>maxi</th>
+              <th>media</th>
+              
+          </tr>
+      </thead>
+      <tbody>
+          {#each datosP as conjuntoP}
+              <tr>
+                  <td>{conjuntoP["province"]}</td>
+                  <td>{conjuntoP["year"]}</td>
+                  <td>{conjuntoP["maximun_temperature"]}</td>
+                  <td>{conjuntoP["minimun_temperature"]}</td>
+                  <td>{conjuntoP["medium_temperature"]}</td>
+              </tr>
+          {/each}
+          <br>
+      </tbody>
+  </Table>
 
     <h1 align="center"><u>Estadisticas Agroclimaticas API compañero</u></h1>
     <Table>
