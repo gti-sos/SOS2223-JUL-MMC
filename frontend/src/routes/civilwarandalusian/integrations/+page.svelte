@@ -110,19 +110,19 @@
       //  }
      //  let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
 
-      // async function getDato_compañero2() {
-      //  const res2 = await fetch(Api_compañero2 , {
-       //       method: "GET",
-      //      });
-       //   try {
+      async function getDato_compañero2() {
+       const res2 = await fetch(Api_compañero2 , {
+              method: "GET",
+            });
+          try {
             
-        //      const rq2 = await res2.json();
-       //       datos5 = rq2;
-        //      console.log(rq2);
-        //  } catch (error) {
-       //       console.log(`Error parsing result: ${error}`);
-       //   }
-//}
+              const rq2 = await res2.json();
+              datos5 = rq2;
+              console.log(rq2);
+          } catch (error) {
+              console.log(`Error parsing result: ${error}`);
+          }
+        }
 
 </script>
 
