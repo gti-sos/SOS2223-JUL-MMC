@@ -20,27 +20,40 @@
     let datos3 = [];
     let datos4 = [];
     let datos5 = [];
-    let data2 = [];
+    let data = [];
     let datosP = [];
-
+    let status = [];
 
     let API_prox = "https://sos2223-jul-mmc-1.appspot.com/api/v2/civilwarandalusian-stats/proxy"; 
 
+  //  async function getDataComp() {
+    //    const res = await fetch(API_prox, {
+      //          method: "GET",
+        //    });
+          //  try {
+            ////  datosP = rqP;
+             //   console.log(rqP);
+           // } catch (error) {
+             //   console.log(`Error parsing result: ${error}`);
+           // }
+   // };
+
+
     async function getDataComp() {
-        const res = await fetch(API_prox, {
-                method: "GET",
-            });
-            try {
-                const rqP = await res.json();
-                datosP = rqP;
-                console.log(rqP);
-            } catch (error) {
-                console.log(`Error parsing result: ${error}`);
-            }
-    };
+    const res = await fetch(API_prox, {
+        method: 'GET'
+      });
+    try {
 
-
-
+      const dataReceived = await res.json();
+      result = JSON.stringify(dataReceived, null, 2);
+      datosP = dataReceived;
+       status = await res.status;
+      resultStatus = status;
+    } catch (error) {
+      console.log(`Error fetching data: ${error}`);
+    }
+  }
 
 
    // async function getRapidApi() {
@@ -108,7 +121,7 @@
         //        console.log(`Error parsing result: ${error}`);
         //    }
       //  }
-     //  let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
+       let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
 
       async function getDato_compañero2() {
        const res2 = await fetch(Api_compañero2 , {
