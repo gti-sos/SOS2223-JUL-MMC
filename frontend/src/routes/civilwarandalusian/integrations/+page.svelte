@@ -13,7 +13,7 @@
         getRapidApi2();
         //getDato_compañero();
         getDato_compañero2();
-        getDataComp();
+      //  getDataComp();
     });
 
     let datos2 = [];
@@ -24,7 +24,7 @@
     let datosP = [];
     let status = [];
 
-    let API_prox = "https://sos2223-jul-mmc-1.appspot.com/proxy"; 
+    let API_prox = "https://sos2223-jul-mmc-1.appspot.com/agroclimatizaciones"; 
 
   //  async function getDataComp() {
     //    const res = await fetch(API_prox, {
@@ -39,21 +39,21 @@
    // };
 
 
-    async function getDataComp() {
-    const res = await fetch(API_prox, {
-        method: 'GET'
-      });
-    try {
+    //async function getDataComp() {
+    //const res = await fetch(API_prox, {
+      //  method: 'GET'
+     // });
+    //try {
 
-      const dataReceived = await res.json();
-      result = JSON.stringify(dataReceived, null, 2);
-      datosP = dataReceived;
-       status = await res.status;
-      resultStatus = status;
-    } catch (error) {
-      console.log(`Error fetching data: ${error}`);
-    }
-  }
+      //const dataReceived = await res.json();
+      //result = JSON.stringify(dataReceived, null, 2);
+      //datosP = dataReceived;
+      // status = await res.status;
+      //resultStatus = status;
+    //} catch (error) {
+      //console.log(`Error fetching data: ${error}`);
+    //}
+  //}
 
 
    // async function getRapidApi() {
@@ -124,7 +124,7 @@
        let Api_compañero2 = "https://sos2223-12.appspot.com/api/v1/pollutions";
 
       async function getDato_compañero2() {
-       const res2 = await fetch(Api_compañero2 , {
+       const res2 = await fetch(API_prox , {
               method: "GET",
             });
           try {
