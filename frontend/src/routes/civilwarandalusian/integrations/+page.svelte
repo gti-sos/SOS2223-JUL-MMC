@@ -24,7 +24,7 @@
     let datosP = [];
     let status = [];
 
-    let API_prox = "https://sos2223-jul-mmc-1.appspot.com/api/v2/civilwarandalusian-stats/proxy"; 
+    let API_prox = "https://sos2223-jul-mmc-1.appspot.com/proxy"; 
 
   //  async function getDataComp() {
     //    const res = await fetch(API_prox, {

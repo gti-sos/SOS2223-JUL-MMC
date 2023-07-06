@@ -8,12 +8,12 @@ function loadBackend_civilwarandalusian(app) {
 
 
     /** PROXY  */
-    app.use("/api/v2/civilwarandalusian-stats/proxy",function(req,res){
-        let urlHost = "https://sos2223-12.appspot.com/api/v1/agroclimatic";
-        let url = urlHost + req.url;
-        console.log('piped: ' + req.url);
-        req.pipe(request(url)).pipe(res);
-    });
+    //app.use("/api/v2/civilwarandalusian-stats/proxy",function(req,res){
+      //  let urlHost = "https://sos2223-12.appspot.com/api/v1/agroclimatic";
+       // let url = urlHost + req.url;
+       // console.log('piped: ' + req.url);
+      //  req.pipe(request(url)).pipe(res);
+   // });
 
     app.get(BASE_API_URL + "/civilwarandalusian-stats/docs", (req, res) => {
 
