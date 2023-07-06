@@ -22,7 +22,7 @@ const PORT = 8080;
 
 var ruta = "/agroclimatizaciones";
 //var apiServerHost = "https://sos2223-12.appspot.com/api/v1/agroclimatic";
-let apiServerHost = "https://gas-price.p.rapidapi.com/europeanCountries/";
+let apiServerHost = "https://gas-price.p.rapidapi.com/europeanCountries";
 app.use(ruta, function(req, res) {
     
     let url = apiServerHost + req.url;
