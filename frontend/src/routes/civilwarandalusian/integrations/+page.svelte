@@ -10,7 +10,7 @@
     
     onMount(async () => {
         getRapidApi();
-    //    getRapidApi2();
+        getRapidApi2();
         getDato_compañero();
         getDato_compañero2();
       //  getDataComp();
@@ -26,53 +26,7 @@
 
     let API_prox = "https://sos2223-jul-mmc-1.appspot.com/agroclimatizaciones"; 
 
-  //  async function getDataComp() {
-    //    const res = await fetch(API_prox, {
-      //          method: "GET",
-        //    });
-          //  try {
-            ////  datosP = rqP;
-             //   console.log(rqP);
-           // } catch (error) {
-             //   console.log(`Error parsing result: ${error}`);
-           // }
-   // };
-
-
-    //async function getDataComp() {
-    //const res = await fetch(API_prox, {
-      //  method: 'GET'
-     // });
-    //try {
-
-      //const dataReceived = await res.json();
-      //result = JSON.stringify(dataReceived, null, 2);
-      //datosP = dataReceived;
-      // status = await res.status;
-      //resultStatus = status;
-    //} catch (error) {
-      //console.log(`Error fetching data: ${error}`);
-    //}
-  //}
-
-
-  //  async function getRapidApi() {
-    //   console.log("API");
-      // const url = 'https://sos2223-jul-mmc-1.appspot.com/agroclimatizaciones';
-        //    const options = {
-          //      method: 'GET',
-            ////      'X-RapidAPI-Key': '031e30be2bmsh4012077306f5d0fp169105jsn72f6d2c3886b',
-                //    'X-RapidAPI-Host': 'gas-price.p.rapidapi.com'
-                //}
-            //};
-
-//try {
-//	const response = await fetch(url, options);
-//	const result = await response.text();
-//	console.log(result);
-//} catch (error) {
-//	console.error(error);
-//}
+ 
 async function getRapidApi() {
        console.log("API");
        const response = await fetch(API_prox, {
@@ -201,31 +155,6 @@ async function getRapidApi() {
             <br>
         </tbody>
     </Table>
-    <h1 align="center"><u>Estadisticas Agroclimaticas con proxy API compañero</u></h1>
-    <Table>
-      <thead>
-          <tr>
-              <th>provincia</th>
-              <th>año</th>
-              <th>minima</th>
-              <th>maxi</th>
-              <th>media</th>
-              
-          </tr>
-      </thead>
-      <tbody>
-          {#each datosP as conjuntoP}
-              <tr>
-                  <td>{conjuntoP["province"]}</td>
-                  <td>{conjuntoP["year"]}</td>
-                  <td>{conjuntoP["maximun_temperature"]}</td>
-                  <td>{conjuntoP["minimun_temperature"]}</td>
-                  <td>{conjuntoP["medium_temperature"]}</td>
-              </tr>
-          {/each}
-          <br>
-      </tbody>
-  </Table>
 
     <h1 align="center"><u>Estadisticas Agroclimaticas API compañero</u></h1>
     <Table>
