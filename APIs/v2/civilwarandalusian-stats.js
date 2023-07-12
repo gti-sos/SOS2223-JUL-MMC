@@ -1,12 +1,13 @@
-import datastore from 'nedb';console.log("F")
+import datastore from 'nedb';console.log("e")
 const db = new datastore();
 const BASE_API_URL = "/api/v2";
 
-import request from "request";
+import request from "request"; 
 
-console.log("G");
+console.log("f")
 function loadBackend_civilwarandalusianV2(app) {
-    /** PROXY  */console.log("H");
+    console.log("g")
+    /** PROXY  */
     app.use("/api/v2/civilwarandalusian-stats/proxy", function(req, res){
         var url = "https://drinks-digital1.p.rapidapi.com/v1/cocktails";
         var head = {
@@ -237,33 +238,33 @@ function loadBackend_civilwarandalusianV2(app) {
         });
 
     });
-
-    console.log("I");
+    console.log("h")
+    
     /** POST ALL */
-    app.post("/api/v2/civilwarandalusian-stats", (req, res) => {
+console.log("i");   app.post("/api/v2/civilwarandalusian-stats", (req, res) => {
         let newCivilWarAndalusian = req.body;
-        console.log("J");
+        
         //check if resource previusly exists.
-        db.findOne({ Id: req.body.Id }, function (err, exisistingCivilWarAndalusiann) {
-            if (exisistingCivilWarAndalusiann != undefined) {console.log("K");
-                res.sendStatus(409);console.log("L");
+console.log("j");     db.findOne({ Id: req.body.Id }, function (err, exisistingCivilWarAndalusiann) {
+console.log("k");       if (exisistingCivilWarAndalusiann != undefined) {
+                res.sendStatus(409);
                 return;
             };
             if (validate_civilWarAndalusian(newCivilWarAndalusian)) {
-                db.insert(newCivilWarAndalusian);
-                res.sendStatus(201);console.log("M");
+                console.log("L");          db.insert(newCivilWarAndalusian);
+                res.sendStatus(201);
 
             } else {
                 res.sendStatus(400);
-            }
-            console.log("N");
-        });
-        console.log("Ñ");
+                console.log("m");           }
+           
+                console.log("n");       });
+        
 
 
 
-    });
-    console.log("O");
+                console.log("ñ");  });
+    
 
 
     /** function to validate that the post method is correctly done */
@@ -447,7 +448,7 @@ function loadBackend_civilwarandalusianV2(app) {
             delete element._id;
             return element;
         }
-    }
-}
-console.log("P");
-export { loadBackend_civilwarandalusianV2 };console.log("Q");
+        console.log("o"); }
+        console.log("p");}
+
+export { loadBackend_civilwarandalusianV2 };console.log("q");
